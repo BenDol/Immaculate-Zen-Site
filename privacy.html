@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Privacy Policy — Immaculate Zen</title>
+		<meta
+			name="description"
+			content="Privacy Policy for the Immaculate Zen publishing tool, detailing what data is collected, how it is used, and how to revoke access."
+		/>
+		<link rel="icon" type="image/png" href="images/profile.png" />
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<nav class="topnav">
+			<a href="index.html">Home</a>
+			<a href="privacy.html" class="active">Privacy</a>
+			<a href="terms.html">Terms</a>
+			<a href="https://www.youtube.com/@ImmaculateZen" target="_blank" rel="noopener">YouTube</a>
+		</nav>
+
+		<main class="container">
+			<h1>Privacy Policy</h1>
+			<p class="meta">Last updated: April 17, 2026</p>
+
+			<p>
+				This Privacy Policy explains how the <strong>Immaculate Zen publishing tool</strong> (the
+				"App") collects, uses, stores, and protects information in connection with the operation
+				of the Immaculate Zen independent music project. The App is used internally by the
+				Immaculate Zen operator to publish original music content to connected social media
+				platforms.
+			</p>
+
+			<h2>1. Who We Are</h2>
+			<p>
+				Immaculate Zen is an independent music project. The App is a private tool used by the
+				project's operator to manage releases and publish original music content to social
+				platforms (YouTube, TikTok, X/Twitter, Meta platforms, and others) through each
+				platform's official API.
+			</p>
+
+			<h2>2. Scope of This Policy</h2>
+			<p>
+				This policy covers the App's handling of data obtained through social platform APIs.
+				Actions you take on the destination platforms themselves (YouTube, TikTok, etc.) are
+				governed by those platforms' own privacy policies and terms.
+			</p>
+
+			<h2>3. What Data We Collect</h2>
+			<p>
+				When a social account is connected to the App via OAuth, we collect and store only the
+				minimum information required to publish content on the connected account's behalf:
+			</p>
+			<table>
+				<thead>
+					<tr>
+						<th>Data</th>
+						<th>Purpose</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>OAuth access token and refresh token</td>
+						<td>
+							To call the platform API on the connected account's behalf when publishing a post
+							or video, and to renew expired access tokens without re-prompting the operator.
+						</td>
+					</tr>
+					<tr>
+						<td>Connected account identifier (open ID or equivalent)</td>
+						<td>
+							To associate the stored tokens with the correct account and prevent posting to the
+							wrong account.
+						</td>
+					</tr>
+					<tr>
+						<td>Display name and avatar URL</td>
+						<td>
+							Shown in the App's internal "Accounts" page so the operator can visually confirm
+							which account is connected before publishing.
+						</td>
+					</tr>
+					<tr>
+						<td>Published post / video ID and URL returned by the platform</td>
+						<td>
+							Stored so the App can link back to the published content for internal tracking.
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2>4. Platform-Specific Data (TikTok)</h2>
+			<p>
+				When the TikTok integration is connected, the App requests the following TikTok scopes
+				through the official Login Kit / OAuth 2.0 flow (PKCE):
+			</p>
+			<ul>
+				<li>
+					<code>user.info.basic</code> — to retrieve the connected account's open ID, display
+					name, and avatar for internal confirmation of the connected account.
+				</li>
+				<li>
+					<code>video.upload</code> — to upload a finished music video (MP4) generated inside the
+					App from Immaculate Zen's own audio and artwork.
+				</li>
+				<li>
+					<code>video.publish</code> — to publish the uploaded video to the connected account's
+					profile via TikTok's Content Posting API (Direct Post), with a caption and privacy
+					level chosen by the operator per post.
+				</li>
+			</ul>
+			<p>
+				The App does <strong>not</strong> read the connected account's videos, followers, likes,
+				comments, inbox, feed, or any other content. It does not read or interact with any other
+				TikTok user's data.
+			</p>
+
+			<h2>5. What We Do NOT Collect</h2>
+			<ul>
+				<li>We do not collect personal information from end viewers of the published content.</li>
+				<li>We do not read or store timelines, feeds, followers, or other users' content.</li>
+				<li>We do not collect payment, financial, or device identifier information.</li>
+				<li>We do not use cookies, analytics trackers, or advertising SDKs inside the App.</li>
+				<li>We do not perform any scraping, aggregation, or data mining on any platform.</li>
+			</ul>
+
+			<h2>6. How We Use the Data</h2>
+			<p>Collected data is used exclusively to:</p>
+			<ul>
+				<li>
+					Publish Immaculate Zen original music content to connected accounts when the operator
+					explicitly initiates a publish action.
+				</li>
+				<li>Display the correctly connected account in the App's internal UI.</li>
+				<li>
+					Refresh expired access tokens silently so the operator does not need to re-authorize on
+					every session.
+				</li>
+				<li>Surface success/failure information for each publish attempt.</li>
+			</ul>
+
+			<h2>7. How Data Is Stored</h2>
+			<p>
+				All OAuth tokens are stored in a local, private database accessible only to the App's
+				operator. Tokens are encrypted at rest. The database is not exposed to the public
+				internet and is not shared with any third parties. No copies of the database are
+				distributed.
+			</p>
+
+			<h2>8. Data Sharing</h2>
+			<p>
+				We do not sell, rent, share, or otherwise transfer your data to third parties. Data is
+				transmitted only between the App and the official API endpoints of the connected
+				platforms (such as <code>open.tiktokapis.com</code>, <code>api.twitter.com</code>,
+				<code>googleapis.com</code>) over HTTPS, exclusively for the purposes described in this
+				policy.
+			</p>
+
+			<h2>9. Data Retention and Deletion</h2>
+			<p>
+				Tokens and associated metadata are retained only while an account remains connected. The
+				App's operator can disconnect any connected account at any time from the App's Accounts
+				page, which immediately deletes the stored access token, refresh token, and associated
+				display name/avatar for that account.
+			</p>
+			<p>
+				You may also revoke the App's access directly from the connected platform's own security
+				settings:
+			</p>
+			<ul>
+				<li>
+					<strong>TikTok:</strong>
+					<a
+						href="https://www.tiktok.com/setting/manage-apps"
+						target="_blank"
+						rel="noopener"
+						>Settings → Manage app permissions</a
+					>
+				</li>
+				<li>
+					<strong>YouTube / Google:</strong>
+					<a
+						href="https://myaccount.google.com/permissions"
+						target="_blank"
+						rel="noopener"
+						>Google Account → Third-party apps with account access</a
+					>
+				</li>
+				<li>
+					<strong>X / Twitter:</strong>
+					<a
+						href="https://x.com/settings/connected_apps"
+						target="_blank"
+						rel="noopener"
+						>Settings → Connected apps</a
+					>
+				</li>
+			</ul>
+
+			<h2>10. Children's Privacy</h2>
+			<p>
+				The App is an internal publishing tool and is not directed to children. It does not
+				knowingly collect information from anyone under 13.
+			</p>
+
+			<h2>11. Security</h2>
+			<p>
+				We take reasonable measures to protect stored data, including encrypting tokens at rest,
+				transmitting all API calls over HTTPS, and running the App only in a private environment
+				controlled by the operator. However, no system is perfectly secure; we cannot guarantee
+				absolute security.
+			</p>
+
+			<h2>12. Changes to This Policy</h2>
+			<p>
+				We may update this policy from time to time. Material changes will be indicated by an
+				updated "Last updated" date at the top of this page.
+			</p>
+
+			<h2>13. Contact</h2>
+			<p>
+				For privacy-related questions or requests, contact the Immaculate Zen project via the
+				<a href="https://www.youtube.com/@ImmaculateZen" target="_blank" rel="noopener"
+					>YouTube channel</a
+				>.
+			</p>
+		</main>
+
+		<footer class="site-footer">
+			<p>© Immaculate Zen</p>
+			<p>
+				<a href="index.html">Home</a> ·
+				<a href="privacy.html">Privacy Policy</a> ·
+				<a href="terms.html">Terms of Service</a> ·
+				<a href="https://www.youtube.com/@ImmaculateZen" target="_blank" rel="noopener">YouTube</a>
+			</p>
+		</footer>
+	</body>
+</html>
