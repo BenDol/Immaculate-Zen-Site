@@ -6,9 +6,9 @@ reviews.
 
 ## Files
 
-- `index.html` - landing page (brand, catalog preview, YouTube link)
-- `privacy.html` - Privacy Policy (names TikTok scopes explicitly)
-- `terms.html` - Terms of Service
+- `index.html` - landing page (brand, catalog preview, YouTube / TikTok links)
+- `privacy/index.html` - Privacy Policy (names TikTok scopes explicitly); served at `/privacy/`
+- `terms/index.html` - Terms of Service; served at `/terms/`
 - `styles.css` - shared styling
 - `images/banner.png`, `images/profile.png` - branding
 
@@ -57,8 +57,8 @@ Once the site is live at the default `github.io` URL:
 When submitting the TikTok app for review, use URLs like:
 
 - **Web/Desktop URL:** `https://<your-user>.github.io/immaculate-zen-site/`
-- **Terms of Service URL:** `https://<your-user>.github.io/immaculate-zen-site/terms.html`
-- **Privacy Policy URL:** `https://<your-user>.github.io/immaculate-zen-site/privacy.html`
+- **Terms of Service URL:** `https://<your-user>.github.io/immaculate-zen-site/terms/`
+- **Privacy Policy URL:** `https://<your-user>.github.io/immaculate-zen-site/privacy/`
 
 All three must return HTTP 200 and load real content - TikTok reviewers actually
 visit them.
@@ -69,5 +69,5 @@ visit them.
 - To refresh the recent-releases list, update the `<ul class="track-list">`
   block in `index.html`.
 - To update branding, replace `images/banner.png` and `images/profile.png`.
-- Bump the **Last updated** date on `privacy.html` and `terms.html` whenever
-  either is revised - TikTok flags policies that look stale.
+- Bump the **Last updated** date on `privacy/index.html` and `terms/index.html`
+  whenever either is revised - TikTok flags policies that look stale.
