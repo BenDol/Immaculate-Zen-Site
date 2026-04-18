@@ -7,8 +7,8 @@ reviews.
 ## Files
 
 - `index.html` - landing page (brand, catalog preview, YouTube / TikTok links)
-- `privacy.html` - Privacy Policy (names TikTok scopes explicitly); served at `/privacy`
-- `terms.html` - Terms of Service; served at `/terms`
+- `privacy/index.html` - Privacy Policy (names TikTok scopes explicitly); served at `/privacy/`
+- `terms/index.html` - Terms of Service; served at `/terms/`
 - `styles.css` - shared styling
 - `images/banner.png`, `images/profile.png` - branding
 
@@ -45,8 +45,8 @@ GitHub Pages can serve from a subfolder of the main repo:
 
 Once the site is live at the default `github.io` URL:
 
-1. On GitHub: **Settings -> Pages -> Custom domain** -> enter e.g.
-   `immaculatezen.com`.
+1. On GitHub: **Settings -> Pages -> Custom domain** -> enter
+   `immaculatezen.studio` (already configured; see `CNAME`).
 2. At your DNS provider, add a CNAME record pointing to
    `<your-user>.github.io`.
 3. Enable "Enforce HTTPS" once GitHub provisions the certificate (takes a few
@@ -56,9 +56,9 @@ Once the site is live at the default `github.io` URL:
 
 When submitting the TikTok app for review, use URLs like:
 
-- **Web/Desktop URL:** `https://<your-user>.github.io/immaculate-zen-site/`
-- **Terms of Service URL:** `https://<your-user>.github.io/immaculate-zen-site/terms`
-- **Privacy Policy URL:** `https://<your-user>.github.io/immaculate-zen-site/privacy`
+- **Web/Desktop URL:** `https://immaculatezen.studio`
+- **Terms of Service URL:** `https://immaculatezen.studio/terms/`
+- **Privacy Policy URL:** `https://immaculatezen.studio/privacy/`
 
 All three must return HTTP 200 and load real content - TikTok reviewers actually
 visit them.
@@ -69,5 +69,5 @@ visit them.
 - To refresh the recent-releases list, update the `<ul class="track-list">`
   block in `index.html`.
 - To update branding, replace `images/banner.png` and `images/profile.png`.
-- Bump the **Last updated** date on `privacy.html` and `terms.html` whenever
-  either is revised - TikTok flags policies that look stale.
+- Bump the **Last updated** date on `privacy/index.html` and `terms/index.html`
+  whenever either is revised - TikTok flags policies that look stale.
